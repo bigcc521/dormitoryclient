@@ -1,0 +1,36 @@
+<form class="weui-form" bindsubmit="bindapartmentselect">
+	<view class="weui-form__text-area">
+			<h2 class="weui-form__title">楼栋选择</h2>
+  </view>
+  <view class="weui-form__control-area">
+		<view class="weui-cells__group weui-cells__group_form">
+			<view class="weui-cells">
+				<view class="weui-cell weui-cell_active weui-cell_select weui-cell_select-after">
+          <view class="weui-cell__hd">
+						<label class="weui-label" style="width: 3em">学区</label>
+					</view>
+					<view class="weui-cell__bd">
+            <picker bindchange="bindDistrictPickerChange" range="{{districts}}" 
+            range-key="{{'name'}}">
+              <input class="weui-select" value="{{districts[districtvalue].name}}"/>
+            </picker>
+				  </view>
+        </view>
+        <view class="weui-cell weui-cell_active weui-cell_select weui-cell_select-after">
+          <view class="weui-cell__hd">
+						<label class="weui-label" style="width: 3em">楼栋</label>
+					</view>
+					<view class="weui-cell__bd">
+            <picker bindchange="bindApartmentPickerChange" range="{{apartments}}" range-key="{{'name'}}">
+              <input class="weui-select" name="apartment" value="{{apartments[apartmentvalue].name}}"/>
+							<input name="apartmentid" hidden="true" value="{{apartments[apartmentvalue].id}}"/>
+            </picker>
+				  </view>
+			  </view>
+			</view>
+		</view>
+	</view>
+  <view class="weui-form__opr-area">
+		<button class="weui-btn weui-btn_primary" form-type="submit">确定</button>
+	</view>
+</form>

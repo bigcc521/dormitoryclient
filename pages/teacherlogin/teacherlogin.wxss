@@ -1,0 +1,4 @@
+/* pages/teacherlogin/teacherlogin.wxss */
+.weui-icon-checked{
+  background-color:cornsilk
+}

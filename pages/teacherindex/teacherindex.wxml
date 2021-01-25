@@ -1,0 +1,35 @@
+<view class="pyg_index">
+  <SearchInput></SearchInput>
+  <!--轮播 -->
+  <swiper autoplay indicator-dots circular>
+    <block wx:for="{{swiperList}}" wx:key="id">
+      <swiper-item>
+        <image src="{{item.src}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--轮播结束 -->
+  <!--功能区 -->
+  <view class="function">
+    <view class="one">
+      <navigator wx:for="{{catesList1}}" url="{{item.url}}" wx:key="id" class="guide" hover-class="none">
+      <image src="{{item.src}}"  class="picture"></image>
+      <text class="text">{{item.text}}</text>
+      </navigator>
+    </view>
+    <view class="one">
+      <navigator wx:for="{{catesList2}}" url="{{item.url}}" wx:key="id" class="guide" hover-class="none">
+      <image src="{{item.src}}"  class="picture"></image>
+      <text class="text">{{item.text}}</text>
+      </navigator>
+    </view>
+  </view> 
+  <!--功能区结束-->
+  <!-- 最新发布-->
+  
+  <view style="padding-top:10px" class="margin-sm bg-white radius shadow shadow-lg" >最新发布公告</view>
+  <view class="article-list-container">
+     <!-- 从后台拿数据 -->
+  </view>
+  <!-- 最新发布结束-->
+</view>
